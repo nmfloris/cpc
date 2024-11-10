@@ -1,4 +1,7 @@
+name: react vite + react 项目
 on: push
+permissions:
+    contents: write
 
 jobs:
     job1:
@@ -6,5 +9,12 @@ jobs:
         steps:
             - uses: actions/checkout@v4
             - run: pwd
-            - run: npm install 
-            - run: npm run build
+            - run: |
+                   npm install 
+                   npm run build
+            
+            - name: 部署
+              uses: JamesIves/github-pages-deploy-action@v4
+              with: 
+                branch: view-page
+                folder: dist
