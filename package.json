@@ -1,0 +1,15 @@
+{
+  "name": "cpc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build":"esbuild src/index.ts --bundle --outfile=out.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "esbuild": "^0.24.0"
+  }
+}
